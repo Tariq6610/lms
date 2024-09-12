@@ -114,7 +114,7 @@ export default function Home() {
           </figure>
           <div className="card-body">
             <h2 className="card-title">Admin Dashboard</h2>
-            <p>Manage user's cources and more</p>
+            <p>Manage user cources and more</p>
             <div className="card-actions justify-end">
               <button className="btn btn-primary">Go to Admin</button>
             </div>
