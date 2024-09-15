@@ -1,4 +1,5 @@
 import "./page.css";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -116,7 +117,7 @@ export default function Home() {
             <h2 className="card-title">Admin Dashboard</h2>
             <p>Manage user cources and more</p>
             <div className="card-actions justify-end">
-              <button className="btn btn-primary">Go to Admin</button>
+              <Link href="/admin"><button className="btn btn-primary">Go to Admin</button></Link>
             </div>
           </div>
         </div>
