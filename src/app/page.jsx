@@ -31,11 +31,11 @@ export default function Home() {
       </div>
 
       <div className="main flex gap-12 flex-wrap justify-center">
-        <div className="card card-compact bg-base-100 w-64 shadow-xl">
+        <div className="card  card-compact bg-base-100 w-11/12 md:w-6/12 lg:w-64 shadow-xl">
           <figure>
             <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKhrWJif1gj7FZ17KlB7H1JVsDvhucGaEzfA&s"
-              alt="Shoes"
+              src="/landingPage/image_1.jpeg"
+              alt="Students"
             />
           </figure>
           <div className="card-body mt-5">
@@ -48,10 +48,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="card card-compact bg-base-100 w-64 shadow-xl">
+        <div className="card card-compact bg-base-100 w-11/12 md:w-6/12 lg:w-64 shadow-xl">
           <figure>
             <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1Wih-WJswDlIVz8Ju3fI5B1R_1cohraOBwA&s"
+              src="/landingPage/image_2.jpeg"
               alt="Students"
             />
           </figure>
@@ -66,10 +66,10 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="card card-compact bg-base-100 w-64 shadow-xl">
+        <div className="card card-compact bg-base-100 w-11/12 md:w-6/12 lg:w-64 shadow-xl">
           <figure>
             <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiZVXsaSmdwE2_XkOf8OUkvO0-UJb4JnJdciJkFwhqmS7-VsNZ-QJZOEfuMDBfbJhdgFw&usqp=CAU"
+              src="/landingPage/image_3.jpeg"
               alt="Students"
             />
           </figure>
@@ -83,10 +83,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="card card-compact bg-base-100 w-64 shadow-xl">
+        <div className="card card-compact bg-base-100 w-11/12 md:w-6/12 lg:w-64 shadow-xl">
           <figure>
             <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU92e5r6aAQxZtqVIBkWyQUYNRE6jsWEBu3Q&s"
+              src="/landingPage/image_4.jpeg"
               alt="Students"
             />
           </figure>
@@ -104,12 +104,12 @@ export default function Home() {
         </div>
 
         {/* Student and admin Cards */}
-        <div className="p-[30px] flex flex-col " >
-        <div className="card lg:card-side bg-base-100  shadow-xl">
+        <div className="p-[30px] flex flex-col items-center" >
+        <div className="card lg:card-side w-11/12 md:w-6/12 lg:w-6/12 bg-base-100  shadow-xl">
           <figure>
             <img
             className="w-[100%]"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2pS5tSnizd3UlvSk-V3Z0rXJBJpo2OM61ig&s"
+              src="/landingPage/adminCard.jpeg"
               alt="Album"
             />
           </figure>
@@ -122,11 +122,11 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="card lg:card-side bg-base-100 shadow-xl mt-8">
+        <div className="card lg:card-side w-11/12 md:w-6/12 lg:w-6/12 bg-base-100 shadow-xl mt-8">
           <figure>
             <img
-            className="w-[100%]"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrnFblbaCtFjRX3e-Yp9nb5zw75OkWhApG7Q&s"
+            className="w-full"
+              src="/landingPage/studentCard.jpeg"
               alt="Album"
             />
           </figure>
