@@ -134,7 +134,7 @@ export default function Home() {
             <h2 className="card-title">Student Dashboard</h2>
             <p>Access cources, track, progress and more</p>
             <div className="card-actions justify-end">
-              <button className="btn btn-primary">Go To Student</button>
+            <Link href="/students"><button className="btn btn-primary">Go To Student</button> </Link>
             </div>
           </div>
         </div>
