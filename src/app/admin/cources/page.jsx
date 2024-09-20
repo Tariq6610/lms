@@ -1,8 +1,20 @@
+"use client"
 import React from 'react'
+import Modal from './modal'
 
 const Cources = () => {
+
+    function del(e){
+      e.parentNode.parentNode.remove()
+    }
+
   return (
     <div className="overflow-x-auto lg:px-20 mt-6">
+      <div className='flex items-center gap-6 my-6'>
+      <h1 className='text-4xl '>Cources</h1>
+      <button className="btn btn-active"  onClick={()=>document.getElementById('my_modal_3').showModal()}>Add Cource</button>
+      <Modal />
+      </div>
     <table className="table lg:table-md table-xs">
       <thead>
         <tr>

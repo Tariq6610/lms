@@ -137,8 +137,8 @@ export default function Home() {
             <Link href="/students"><button className="btn btn-primary">Go To Student</button> </Link>
             </div>
           </div>
-        </div>
         
+        </div>
       </div>
     </main>
   );
