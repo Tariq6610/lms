@@ -19,7 +19,8 @@ const CardForm = () => {
         Teacher,
         startDate,
         endDate,
-        imageURL : URL.createObjectURL(imageFile)
+        imageURL : URL.createObjectURL(imageFile),
+        enrolled : false
       };
       addCard(newCard);
       setName('');

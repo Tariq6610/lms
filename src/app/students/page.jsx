@@ -1,11 +1,20 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useCardContext } from "@/components/CardContext";
 
 const studentPage = () => {
-  const { cards } = useCardContext();
+  const { cards,  } = useCardContext();
+  const [isEnrolled, updateButton] = useState(false)
+  
+
+  function getEnrolled(id){
+    cards.filter((card)=> card.id == id).map((card)=>{
+      card.enrolled = true;
+      updateButton(!isEnrolled)
+    })
+  }
 
   return (
     <>
@@ -34,8 +43,8 @@ const studentPage = () => {
                 <h2 className="card-title ">{card.name}</h2>
                 <p className="text-gray-500 font-bold">{card.Teacher}</p>
                 <div className="card-actions justify-center">
-                  <button className="btn btn-primary cardbtn mt-3">
-                    Enroll Now
+                  <button onClick={()=>{getEnrolled(card.id)}} className={card.enrolled? "btn btn-disabled mt-3":"btn btn-primary cardbtn mt-3"}>
+                    {card.enrolled ? "Enrolled" : "Enroll now"}
                   </button>
                 </div>
               </div>
