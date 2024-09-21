@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react'
 import { useCardContext } from "@/components/CardContext";
 
-const myCources = () => {
+const MyCources = () => {
     
     const { cards,  } = useCardContext();
 
@@ -40,4 +40,4 @@ const myCources = () => {
 
 }
 
-export default myCources
+export default MyCources

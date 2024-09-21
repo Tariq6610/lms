@@ -4,7 +4,7 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { useCardContext } from "@/components/CardContext";
 
-const studentPage = () => {
+const StudentPage = () => {
   const { cards,  } = useCardContext();
   const [isEnrolled, updateButton] = useState(false)
   
@@ -56,4 +56,4 @@ const studentPage = () => {
   );
 };
 
-export default studentPage;
+export default StudentPage;

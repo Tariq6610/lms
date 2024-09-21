@@ -1,6 +1,6 @@
 "use client"
 import React, { useEffect } from 'react'
-import Modal from './modal'
+import Modal from './Modal'
 import { useCardContext } from '@/components/CardContext'
 
 const Cources = () => {
