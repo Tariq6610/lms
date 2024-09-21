@@ -5,7 +5,7 @@ import { useCardContext } from '@/components/CardContext'
 
 const Cources = () => {
   
-const {cards, removeCard} = useCardContext()
+const {cards, removeCard, editCard} = useCardContext()
 
  
 
@@ -16,9 +16,9 @@ const {cards, removeCard} = useCardContext()
       <button className="btn btn-active"  onClick={()=>document.getElementById('my_modal_3').showModal()}>Add Cource</button>
       <Modal />
       </div>
-    <table className="table text-black lg:table-lg table-xs">
+    <table className="table bg-black lg:table-lg table-xs">
       <thead>
-        <tr className='text-black'>
+        <tr className='text-white'>
           <th></th>
           <th>Cource</th>
           <th>start Date</th>
@@ -47,7 +47,7 @@ const {cards, removeCard} = useCardContext()
           </td>
           <td>{card.startDate}</td>
           <td>{card.endDate}</td>
-          <td><button className="btn btn-active">Edit</button> <button onClick={()=>{removeCard(card.id)}} className="btn btn-active btn-neutral">Delete</button></td>
+          <td><button onClick={()=>{document.getElementById('my_modal_3').showModal(); editCard(card.id)} }  className="btn btn-active">Edit</button> <button onClick={()=>{removeCard(card.id)}} className="btn btn-active btn-neutral">Delete</button></td>
         </tr>
         ))}
 
