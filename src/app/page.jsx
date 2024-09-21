@@ -42,9 +42,9 @@ export default function Home() {
             <h2 className="card-title ">Software Development</h2>
             <p>30+ cources</p>
             <div className="card-actions justify-center">
-              <button className="btn btn-primary cardbtn ">
+             <Link href="/students"> <button className="btn btn-primary cardbtn ">
                 View All Cources
-              </button>
+              </button></Link>
             </div>
           </div>
         </div>
@@ -59,9 +59,9 @@ export default function Home() {
             <h2 className="card-title">Graphic Design</h2>
             <p>30+ Cources</p>
             <div className="card-actions justify-center">
-              <button className="btn btn-primary cardbtn ">
-                View All cources
-              </button>
+            <Link href="/students"> <button className="btn btn-primary cardbtn ">
+                View All Cources
+              </button></Link>
             </div>
           </div>
         </div>
@@ -77,9 +77,9 @@ export default function Home() {
             <h2 className="card-title">Digital Marketing</h2>
             <p>30+ Cources</p>
             <div className="card-actions justify-center">
-              <button className="btn btn-primary cardbtn mt-3">
-                View All cources
-              </button>
+            <Link href="/students"> <button className="btn btn-primary cardbtn ">
+                View All Cources
+              </button></Link>
             </div>
           </div>
         </div>
@@ -94,9 +94,9 @@ export default function Home() {
             <h2 className="card-title">Machine Learning</h2>
             <p>30+ Cources</p>
             <div className="card-actions justify-center">
-              <button className="btn btn-primary cardbtn mt-3">
-                View All cources
-              </button>
+            <Link href="/students"> <button className="btn btn-primary cardbtn ">
+                View All Cources
+              </button></Link>
             </div>
           </div>
         </div>

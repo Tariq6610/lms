@@ -12,13 +12,13 @@ const {cards, removeCard} = useCardContext()
   return (
     <div className="overflow-x-auto lg:px-20 mt-6">
       <div className='flex items-center gap-6 my-6'>
-      <h1 className='text-4xl '>Cources</h1>
+      <h1 className='text-4xl text-black'>Cources</h1>
       <button className="btn btn-active"  onClick={()=>document.getElementById('my_modal_3').showModal()}>Add Cource</button>
       <Modal />
       </div>
-    <table className="table lg:table-md table-xs">
+    <table className="table text-black lg:table-lg table-xs">
       <thead>
-        <tr>
+        <tr className='text-black'>
           <th></th>
           <th>Cource</th>
           <th>start Date</th>
@@ -41,7 +41,7 @@ const {cards, removeCard} = useCardContext()
             </div>
             <div>
               <div className="font-bold">{card.name}</div>
-              <div className="text-sm opacity-50">{card.Teacher}</div>
+              <div className="text-sm opacity-80">{card.Teacher}</div>
             </div>
           </div>
           </td>
