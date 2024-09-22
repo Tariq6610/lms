@@ -14,7 +14,7 @@ const CardForm = () => {
     useEffect(() => {
       if (currentCard) {
         setName(currentCard.name || '');  
-        setTeacher(currentCard.teacher || '');
+        setTeacher(currentCard.Teacher || '');
         setStartDate(currentCard.startDate || '');
         setEndDate(currentCard.endDate || '');
         setImageFile(null); 
@@ -26,7 +26,7 @@ const CardForm = () => {
       const newCard = {
         id: currentCard ? currentCard.id : Date.now(),
         name,
-        Teacher: Teacher,
+        Teacher,
         startDate,
         endDate,
         imageURL: imageFile ? URL.createObjectURL(imageFile) : currentCard?.imageURL,
@@ -46,9 +46,6 @@ const CardForm = () => {
       
     };
 
-    // useEffect(()=>{
-    //   console.log(cards)
-    // },[cards])
   
     return (
       <>
@@ -98,7 +95,7 @@ const CardForm = () => {
               Add Card
             </button>
           </div>
-          <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+          <button onClick={()=> document.getElementById("my_modal_3").close()} className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
                 ✕
           </button>
         </form>

@@ -77,18 +77,13 @@ export const CardProvider = ({ children }) => {
 
   const addCard = (card) => {
     setCards((prevCards) => [...prevCards, card]);
+    document.getElementById("my_modal_3").close();
   };
 
   const removeCard = (id) => {
     setCards((prevCards) => prevCards.filter((card) => card.id !== id));
   };
 
-  // const editCard = (id) =>{
-  //   cards.filter((card)=> card.id == id).map((card)=> {
-  //     console.log(card)
-  //   }
-  //   )
-  // }
 
 
   return (

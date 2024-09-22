@@ -23,9 +23,9 @@ export default function Home() {
               placeholder="What do you want to learn?"
               className="flex-grow p-3 rounded-l-md border-none focus:outline-none"
             />
-            <button className="p-3 bg-blue-500 text-white rounded-r-md">
+           <Link href="/students"> <button className="p-3 bg-blue-500 text-white rounded-r-md">
               Search
-            </button>
+            </button></Link>
           </div>
         </div>
       </div>

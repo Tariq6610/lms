@@ -32,7 +32,7 @@ const StudentPage = () => {
               key={card.id}
               className="card card-compact bg-base-100 w-11/12 md:w-6/12 lg:w-64 shadow-xl"
             >
-              <figure className="h-40">
+              <figure className="lg:h-40">
                 <img
                   className="w-full h-full"
                   src={card.imageURL}
