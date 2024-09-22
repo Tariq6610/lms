@@ -44,7 +44,7 @@ export const CardProvider = ({ children }) => {
     },
     { id: 5,
       name : "Photograpy: A master Class",
-      Teacher : "By Laurie Santos",
+      Teacher : "By James Nick",
       startDate: "sep 11",
       endDate : "nov 11",
       imageURL : "/cources/photo.jpeg",
@@ -53,10 +53,82 @@ export const CardProvider = ({ children }) => {
     },
     { id: 6,
       name : "Creative writting",
-      Teacher : "By Laurie Santos",
+      Teacher : "By Robert Downie",
       startDate: "nov 15",
       endDate : "jan 15",
       imageURL : "/cources/creativeWriting.jpeg",
+      enrolled: false
+    },
+    { id: 7,
+      name : "The Art of Negotiation",
+      Teacher : "By David Malan",
+      startDate: "jan 18",
+      endDate : "Mar 18",
+      imageURL : "/cources/negotiation.jpeg",
+      enrolled: false
+    },
+    { id: 8,
+      name : "Investing for Beginners",
+      Teacher : "By Warren Buffet",
+      startDate: "Mar 21",
+      endDate : "May 21",
+      imageURL : "/cources/investing.jpeg",
+      enrolled: false
+    },
+    { id: 9,
+      name : "The Science Of Happiness",
+      Teacher : "By Jennifer Lawrence",
+      startDate: "Mar 25",
+      endDate : "Jun 25",
+      imageURL : "/cources/happiness.jpeg",
+      enrolled: false
+    },
+    { id: 10,
+      name : "Public Speaking Bootcamp",
+      Teacher : "By Simon Sinek",
+      startDate: "Jun 28",
+      endDate : "Sep 28",
+      imageURL : "/cources/speaking.jpeg",
+      enrolled: false
+    },
+    { id: 11,
+      name : "Intro to Product Design",
+      Teacher : "By Julie Zhuo",
+      startDate: "Nov 1",
+      endDate : "Feb 1",
+      imageURL : "/cources/production.jpeg",
+      enrolled: false
+    },
+    { id: 12,
+      name : "Japanese Cuisine",
+      Teacher : "By Masaharu Morimoto",
+      startDate: "Feb 5",
+      endDate : "May 5",
+      imageURL : "/cources/cusine.jpeg",
+      enrolled: false
+    },
+    { id: 13,
+      name : "DIY Home Renovation",
+      Teacher : "By Chip & Joanna Gaines",
+      startDate: "May 8",
+      endDate : "Aug 8",
+      imageURL : "/cources/renovation.jpeg",
+      enrolled: false
+    },
+    { id: 14,
+      name : "Fitness Foundation",
+      Teacher : "By Joe Wicks",
+      startDate: "Aug 12",
+      endDate : "Nov 12",
+      imageURL : "/cources/fitness.jpeg",
+      enrolled: false
+    },
+    { id: 15,
+      name : "Cyber Security Fundamentals",
+      Teacher : "Alan Thomas",
+      startDate: "Nov 15",
+      endDate : "Fab 15",
+      imageURL : "/cources/cyber.jpeg",
       enrolled: false
     },
   ]);
@@ -88,7 +160,7 @@ export const CardProvider = ({ children }) => {
 
   return (
     <CardContext.Provider value={{ cards, addCard, removeCard, editCard, currentCard,
-      selectCardForEdit, }}>
+      selectCardForEdit, setCards}}>
       {children}
     </CardContext.Provider>
   );

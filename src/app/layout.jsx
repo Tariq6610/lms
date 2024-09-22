@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import { CardProvider } from "@/components/CardContext";
+import Footer from "@/components/Footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -23,10 +24,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body
       data-theme="night"
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-[100vh]`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-[100vh] bg-white`}
       >
          <CardProvider>
         {children}
+        <Footer />
          </CardProvider>
       </body>
     </html>

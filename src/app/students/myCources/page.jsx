@@ -4,7 +4,13 @@ import { useCardContext } from "@/components/CardContext";
 
 const MyCources = () => {
     
-    const { cards,  } = useCardContext();
+    const { cards, setCards } = useCardContext();
+
+    function unEnrolled(id){
+      setCards((prevCards)=>
+        prevCards.map(card => (card.id == id ? {...card, enrolled : false} : card))
+      )
+    }
 
   return (
   
@@ -29,6 +35,7 @@ const MyCources = () => {
             <h2 className="card-title ">{card.name}</h2>
             <p className="text-gray-500 font-bold">{card.Teacher}</p>
             <div className="card-actions justify-center">
+              <button onClick={()=> unEnrolled(card.id)} className='hover:text-red-500'>Click to Unenrolled</button>
             </div>
           </div>
         </div>

@@ -16,10 +16,6 @@ const AdminPage = () => {
           <h1 className="text-black font-bold text-4xl mb-4">
             All Cources
           </h1>
-          <p className="text-slate-500 font-bold">
-            Explore the world greatest cources. Dive into a subject, learn from
-            the best, and get the skills you need to succeed{" "}
-          </p>
         </div>
         <div className="mt-8 flex gap-2 flex-wrap lg:justify-center md:justify-center justify-center">
           {cards.map((card)=>(
