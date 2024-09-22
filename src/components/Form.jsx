@@ -63,7 +63,7 @@ const CardForm = () => {
             type="text"
             value={Teacher}
             onChange={(e) => setTeacher(e.target.value)}
-            placeholder="Teacher"
+            placeholder="Instructor"
             required
           />
           <input
