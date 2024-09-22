@@ -61,6 +61,20 @@ export const CardProvider = ({ children }) => {
     },
   ]);
 
+  const [currentCard, setCurrentCard] = useState(null); 
+
+  const editCard = (updatedCard) => {
+    setCards((prevCards) =>
+      prevCards.map((card) => (card.id === updatedCard.id ? updatedCard : card))
+    );
+    setCurrentCard(null); // Clear current card after editing
+  };
+
+  const selectCardForEdit = (id) => {
+    const card = cards.find((c) => c.id === id);
+    setCurrentCard(card);
+  };
+
   const addCard = (card) => {
     setCards((prevCards) => [...prevCards, card]);
   };
@@ -69,14 +83,17 @@ export const CardProvider = ({ children }) => {
     setCards((prevCards) => prevCards.filter((card) => card.id !== id));
   };
 
-  const editCard = (id) =>{
-    cards.filter((card)=> card.id == id).map((card)=> console.log(card)
-    )
-  }
+  // const editCard = (id) =>{
+  //   cards.filter((card)=> card.id == id).map((card)=> {
+  //     console.log(card)
+  //   }
+  //   )
+  // }
 
 
   return (
-    <CardContext.Provider value={{ cards, addCard, removeCard, editCard }}>
+    <CardContext.Provider value={{ cards, addCard, removeCard, editCard, currentCard,
+      selectCardForEdit, }}>
       {children}
     </CardContext.Provider>
   );

@@ -4,30 +4,45 @@ import { useEffect, useState } from "react";
 
 
 const CardForm = () => {
-    const { addCard, cards } = useCardContext()
+    const { addCard, cards, editCard, currentCard  } = useCardContext()
     const [name, setName] = useState('');
     const [Teacher, setTeacher] = useState('');
     const [startDate, setStartDate] = useState('');
     const [endDate, setEndDate] = useState('');
     const [imageFile, setImageFile] = useState(null);
+
+    useEffect(() => {
+      if (currentCard) {
+        setName(currentCard.name || '');  
+        setTeacher(currentCard.teacher || '');
+        setStartDate(currentCard.startDate || '');
+        setEndDate(currentCard.endDate || '');
+        setImageFile(null); 
+      }
+    }, [currentCard]);
   
     const handleSubmit = (e) => {
       e.preventDefault();
       const newCard = {
-        id: Date.now(),
+        id: currentCard ? currentCard.id : Date.now(),
         name,
-        Teacher,
+        Teacher: Teacher,
         startDate,
         endDate,
-        imageURL : URL.createObjectURL(imageFile),
-        enrolled : false
+        imageURL: imageFile ? URL.createObjectURL(imageFile) : currentCard?.imageURL,
+        enrolled: false
       };
-      addCard(newCard);
+      if (currentCard) {
+        editCard(newCard); // Edit the existing card
+      } else {
+        addCard(newCard); // Add a new card
+      }
       setName('');
       setTeacher('');
       setStartDate('');
       setEndDate('')
       setImageFile(null)
+      document.getElementById("my_modal_3").close();
       
     };
 
