@@ -195,7 +195,7 @@ export default function Home() {
             <div className="card-body mt-5">
               <h2 className="card-title ">Flexible Scheduling</h2>
               <p className="opacity-65">
-              Flexible Scheduling allows you to balance your learning with other commitments. Whether you're a full-time professional or have personal obligations, this flexibility enables you to learn at your own pace, ensuring you stay on track without sacrificing other responsibilities.
+              Flexible Scheduling allows you to balance your learning with other commitments. Whether you are a full-time professional or have personal obligations, this flexibility enables you to learn at your own pace, ensuring you stay on track without sacrificing other responsibilities.
               </p>
             </div>
           </div>
